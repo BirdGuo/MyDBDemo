@@ -1,0 +1,55 @@
+@import "movies-list/movie-list-template.wxss";
+@import "movies-grid/movie-grid-template.wxss";
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 0;
+background-color: #f2f2f2;
+}
+
+.search {
+  background-color: #f2f2f2;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/**
+ margin: auto 0 auto 0;上下居中 上下右左
+*/
+
+.search-img {
+  margin: auto 0 auto 20rpx;
+}
+
+.search-input {
+  width: 85%;
+  margin: auto 0 auto 20rpx;
+}
+
+.xx-img {
+  height: 30rpx;
+  width: 30rpx;
+  margin: auto 20rpx auto 20rpx;
+}
+
+.placeholder {
+  font-size: 14px;
+  color: #d1d1d1;
+  margin-left: 20rpx;
+}
+
+/**
+将这的width改成100%，不然会出现右移的问题
+*/
+.movies-template {
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+
+.search-panel {
+  position: absolute;
+  top: 80rpx;
+}

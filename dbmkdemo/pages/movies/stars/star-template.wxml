@@ -1,0 +1,15 @@
+<template name="starsTemplate">
+
+  <!-- 评分星级页面 -->
+
+  <!-- <template>元素，基本上可以确定是2013年才出现的。干嘛用的呢，顾名思意，就是用来声明是“模板元素”。 -->
+  <view class="stars-container">
+    <view class="stars">
+      <block wx:for="{{stars}}" wx:for-item="i">
+        <image class="star-img" wx:if="{{i}}" src="/images/icon/star.png"></image>
+        <image class="star-img" wx:else src="/images/icon/none-star.png"></image>
+      </block>
+    </view>
+    <text class="stars-score">{{score}}</text>
+  </view>
+</template>

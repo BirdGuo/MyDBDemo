@@ -1,0 +1,14 @@
+<import src="../stars/star-template.wxml" />
+<template name="movieTemplate">
+
+  <!--catchtap关键字和onTapTag有一点陌生，事件绑定事件绑定的写法同组件的属性，以 key、value 的形式。
+  key 以bind或catch开头，然后跟上事件的类型，如bindtap,catchtouchstart,value 是一个字符串，需要在对应的 Page 中定义同名的函数。
+  不然当触发事件的时候会报错。
+  bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以阻止冒泡事件向上冒泡。
+  可以看到catchtap，就是catch的，而onTapTag呢则是在js中定义的方法（函数），处理事件。 -->
+  <view class="movie-container" catchtap="onMovieTap" data-movieId="{{movieId}}">
+    <image src="{{converageUrl}}" class="movie-img"></image>
+    <text class="movie-title">{{title}}</text>
+    <template is="starsTemplate" data="{{stars:stars,score:average}}" />
+  </view>
+</template>
