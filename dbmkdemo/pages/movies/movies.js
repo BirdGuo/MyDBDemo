@@ -42,6 +42,7 @@ Page({
 
     onMovieTap: function (event) {
 
+        console.log("------------1---------------")
         var movieId = event.currentTarget.dataset.movieid;
         wx.navigateTo({
             url: "movie-detail/movie-detail?id=" + movieId
@@ -83,7 +84,7 @@ Page({
             }, // 设置请求的 header
             success: function (res) {
                 // success
-                console.log(res);
+                // console.log(res);
                 that.processDoubanData(res.data, settedKey, categoryTitle)
             },
             fail: function () {

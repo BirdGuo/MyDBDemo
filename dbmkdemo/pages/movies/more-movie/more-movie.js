@@ -43,6 +43,16 @@ Page({
         util.http(dataUrl, this.processDoubanData)
     },
 
+       onMovieTap: function (event) {
+
+        console.log("------------1---------------")
+        var movieId = event.currentTarget.dataset.movieid;
+        wx.navigateTo({
+            url: "../movie-detail/movie-detail?id=" + movieId
+        })
+
+    },
+
     /**
      * 下拉刷新
      */
